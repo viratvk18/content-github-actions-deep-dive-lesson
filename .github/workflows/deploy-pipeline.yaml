@@ -50,7 +50,7 @@ jobs:
       - name: create release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secret.github_token }}
+          GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
           tag-name: ${{ github.run_number }}
           release-name: Release from ${{ github.run_runner }}
